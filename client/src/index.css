@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root,
+.app {
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  @apply bg-slate-50 text-slate-700 transition-colors duration-300;
+}
+
+.dark body {
+  @apply bg-grey-900 text-grey-100;
+}
+
+@layer components {
+  .linkedin-card {
+    @apply bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 shadow-lg transition-all duration-200 hover:shadow-xl backdrop-blur-sm;
+  }
+
+  .linkedin-button-primary {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold py-2 px-4 rounded-full transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed shadow-md hover:shadow-lg;
+  }
+
+  .linkedin-button-secondary {
+    @apply bg-transparent hover:bg-blue-50 dark:hover:bg-slate-700 text-blue-600 dark:text-blue-400 font-semibold py-2 px-4 rounded-full border border-blue-600 dark:border-blue-400 transition-all duration-200 active:scale-95;
+  }
+
+  .linkedin-input {
+    @apply w-full px-4 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all duration-200;
+  }
+}
+
+@layer utilities {
+  .glass-morphism {
+    @apply bg-white/70 dark:bg-grey-800/70 backdrop-blur-md border border-white/20 dark:border-grey-700/50;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+}
