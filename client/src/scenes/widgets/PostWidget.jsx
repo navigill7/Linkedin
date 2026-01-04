@@ -43,7 +43,7 @@ const PostWidget = ({
   const getImageUrl = (path) => {
     if (!path) return null;
     if (path.startsWith('http')) return path;
-    return `${process.env.REACT_APP_API_URL || 'http://localhost:3001'}/assets/${path}`;
+    return `${process.env.REACT_APP_API_URL || 'http://18.222.165.204:3001'}/assets/${path}`;
   };
 
   return (

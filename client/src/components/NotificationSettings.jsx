@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Bell, X, Loader, Check, Clock } from 'lucide-react';
 import { useSelector } from 'react-redux';
 
-const NOTIFICATION_SERVICE_URL = process.env.REACT_APP_NOTIFICATION_SERVICE_URL || 'http://localhost:4001';
+const NOTIFICATION_SERVICE_URL = process.env.REACT_APP_NOTIFICATION_SERVICE_URL || 'http://18.222.165.204:4001';
 
 const NotificationSettings = ({ isOpen, onClose }) => {
   const token = useSelector((state) => state.token);

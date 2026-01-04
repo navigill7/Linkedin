@@ -81,7 +81,7 @@ const MyPostWidget = ({ picturePath }) => {
         const base64Data = reader.result.split(',')[1]; // Remove data:image/...;base64, prefix
 
         // Call backend API to generate captions
-        const response = await fetch(`${process.env.REACT_APP_API_URL || 'http://localhost:3001'}/captions/generate`, {
+        const response = await fetch(`${process.env.REACT_APP_API_URL || 'http://18.222.165.204:3001'}/captions/generate`, {
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,

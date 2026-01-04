@@ -30,7 +30,7 @@ export const ChatProvider = ({ children }) => {
   useEffect(() => {
     if (!token || !user) return;
 
-    const CHAT_SERVER_URL = process.env.REACT_APP_CHAT_SERVER_URL || 'http://localhost:4000';
+    const CHAT_SERVER_URL = process.env.REACT_APP_CHAT_SERVER_URL || 'http://18.222.165.204:4000';
     
     const newSocket = io(CHAT_SERVER_URL, {
       auth: { token },
@@ -113,7 +113,7 @@ export const ChatProvider = ({ children }) => {
     if (!token) return;
 
     try {
-      const CHAT_API_URL = process.env.REACT_APP_CHAT_API_URL || 'http://localhost:4000/api/chat';
+      const CHAT_API_URL = process.env.REACT_APP_CHAT_API_URL || 'http://18.222.165.204:4000/api/chat';
       const response = await fetch(`${CHAT_API_URL}/conversations`, {
         headers: { Authorization: `Bearer ${token}` },
       });
@@ -129,7 +129,7 @@ export const ChatProvider = ({ children }) => {
     if (!token || !conversationId) return;
 
     try {
-      const CHAT_API_URL = process.env.REACT_APP_CHAT_API_URL || 'http://localhost:4000/api/chat';
+      const CHAT_API_URL = process.env.REACT_APP_CHAT_API_URL || 'http://18.222.165.204:4000/api/chat';
       const response = await fetch(
         `${CHAT_API_URL}/conversations/${conversationId}/messages`,
         {

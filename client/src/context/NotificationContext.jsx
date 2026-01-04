@@ -14,7 +14,7 @@ export const useNotifications = () => {
   return context;
 };
 
-const NOTIFICATION_SERVICE_URL = process.env.REACT_APP_NOTIFICATION_SERVICE_URL || 'http://localhost:4001';
+const NOTIFICATION_SERVICE_URL = process.env.REACT_APP_NOTIFICATION_SERVICE_URL || 'http://18.222.165.204:4001';
 
 export const NotificationProvider = ({ children }) => {
   const [stompClient, setStompClient] = useState(null);

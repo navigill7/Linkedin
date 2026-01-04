@@ -51,7 +51,7 @@ const Form = () => {
   const isRegister = pageType === "register";
 
   const handleDiscordLogin = () => {
-    window.location.href = "http://localhost:3001/auth/discord";
+    window.location.href = "http://18.222.165.204:3001/auth/discord";
   };
 
   const register = async (values, onSubmitProps) => {
